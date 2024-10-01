@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/adminHome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bismillah -->
+
+    <div class="main">
+        <header>
+            <img src="Images/bigp.png" alt="">
+            <span></span>
+            <a href="/admin/logout">
+                <div class="log-outer">
+                    Logout
+                </div>
+            </a>
+        </header>
+        <section>
+            <div class="bodyMain">
+                <div onclick="showDevDetails('update')" class="cardItems one">
+                    <div class="user-details">
+                        <h2>Modify</h2>
+                        <h1>Users Data</h1>
+                        <p>Updating a user involveView
+                            Update
+                            s modifying their existing information, such as changing their
+                            username, password, or email. This process typically requires verifying the user’s identity
+                            before saving the updated details to the database.</p>
+                    </div>
+                </div>
+                <div onclick="showDevDetails('create')" class="cardItems two">
+                    <div class="com-soon">
+                        <h2>Create</h2>
+                        <h1>A new User</h1>
+                        <p>To create a new user in a system, you typically collect basic information like a username,
+                            password, and email. This data is then saved securely in a database, allowing the user to
+                            log in and<br>access the system in the future.</p>
+                    </div>
+                </div>
+                <div onclick="showDevDetails('read')" class="cardItems three">
+                    <div class="dev">
+                        <h2>Search or Find</h2>
+                        <h1>Users</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div onclick="removeShowPage()" class="dev-details">
+        <div class="search-user">
+            <img onclick="removeShowPage()" id="closer" src="Images/close-512.webp" alt="">
+            <div class="user-search-container">
+                <input oninput="searchUserData(this.value)" placeholder="Search users here" id="searchInput" type="text">
+                <img i id="add" src="Images/close-512.webp" alt="">
+            </div>
+            <div class="user-view">
+                <p id="up-head">Create User</p>
+                <div class="input-option">
+                    <div>
+                        <p>Full name</p>
+                        <input id="userFullName" placeholder="My Nmae" type="text">
+                    </div>
+                    <div>
+                        <p>Email</p>
+                        <input id="userEmail"placeholder="sample@gmail.com" type="email">
+                    </div>
+                    <div>
+                        <p>Phone</p>
+                        <input id="userPhone"placeholder="90XX34XX21XX" type="text">
+                    </div>
+                    <div>
+                        <p>password</p>
+                        <input id="userPassword" placeholder="Strong@pas$word123" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="user-list">
+                {{!-- <div class="demo">
+                    <div class="inner">
+                        <p>Jahnad</p>
+                        <span></span>
+                        <button onclick="buttonHover(this)" id="view-btn">View</button>
+                        <button onclick="buttonHover(this)" id="update-btn">Update</button>
+                        <button onclick="buttonHover(this)" id="delete-btn">Delete</button>
+                    </div> --}}
+                </div>
+            </div>
+            <div class="loader">Created successfully</div>
+        </div>
+    </div>
+    <div class="toast">
+        error should shown here
+    </div>
+
+    <script src="js/adminHome.js"></script>
+</body>
+
+</html>

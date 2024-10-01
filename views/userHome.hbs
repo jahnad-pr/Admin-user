@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/userHome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bismillah -->
+
+    <div class="main">
+        <header>
+            <img src="Images/bigp.png" alt="">
+            <span></span>
+            <a href="/user/logout"><div class="log-outer">
+                Logout
+            </div></a>
+        </header>
+        <section>
+            <div class="bodyMain">
+                <div class="cardItems one">
+                    <div class="user-details">
+                        <div class="span">
+                            <p>Name</p>
+                            <h3>{{name}}</h3>
+                            <p>Email</p>
+                            <h3>{{email}}</h3>
+                            <p>Phone number</p>
+                            <h3>{{phone}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardItems two">
+                    <div class="com-soon">
+                        <h2>Can you smell it ?</h2>
+                        <h1>We are Cooking</h1>
+                        <span></span>
+                        <p>Get ready to experience the aroma of culinary creativity! Our app is cooking up a storm with exciting features that bring the kitchen right to your fingertips. Whether you're a seasoned chef or a kitchen newbie, our app offers easy-to-follow recipes, step-by-step instructions, and tips to elevate your cooking game</p>
+                    </div>
+                </div>
+                <div onclick="showDevDetails()" class="cardItems three">
+                    <div class="dev">
+                        <h2>Want to know</h2>
+                        <h1>About<span> this </span>chef<span> ?</span></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div onclick="removeShowPage()" class="dev-details">
+        <div class="dev-container">
+            <img onclick="removeShowPage()" id="closer" src="Images/close-512.webp" alt="">
+            <img id="myPic" src="Images/Jahanad.jpg" alt="">
+            <h1>Jahanad Puthankottil</h1>
+            <p>As a web developer, I see myself as a digital creator, blending my love for design with technical skills to craft stunning and functional websites. I enjoy turning ideas into visually engaging and responsive online experiences, where every detail is carefully considered to ensure a seamless user journey. My passion lies in designing and building websites that not only look beautiful but also perform flawlessly across all devices, bringing creativity and code together to shape the way people explore the web.</p>
+            <h2>Visit my Kitchen</h2>
+        </div>
+    </div>
+    <div class="toast">
+        error should shown here
+    </div>
+
+
+    <script src="js/userHome.js"></script>
+</body>
+
+</html>

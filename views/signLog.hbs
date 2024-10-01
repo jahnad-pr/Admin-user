@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signLog.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Bismillah -->
+
+    <!-- Main -->
+    <div class="main">
+        <div class="bg">
+            <!-- Two parts -->
+            <div class="container One">
+                <div class="select-btn">
+                    <div id="ni" class="selecter first">Signup</div>
+                    <div class="selecter midle">Login</div>
+                    {{!-- <div class="selecter last"> Admin</div> --}}
+                </div>
+
+            </div>
+            <div class="container Two">
+
+                <div class="M-forms One">
+
+                    <!-- Heads -->
+                    <h1>Signup</h1>
+
+
+                    <!-- Signup -->
+                    <form method="dialog">
+                        <label for="">Full Name</label>
+                        
+                        <input name="name" type="text">
+                        <label for="">Phone Number</label>
+                        <input name="phone" type="number">
+                        <label for="">Email Adress</label>
+                        <input name="email" type="email">
+                        <label for="">New Password</label>
+                        <input name="password" type="password" class="signPass">
+                        <label for="">Confirm Password</label>
+                        <input id="cpass" type="password">
+                        {{!-- <input id="cpass" type="password" class="signPass"> --}}
+                        <span>
+                            <input type="checkbox" onchange="showPass('signPass')" name="sh">
+                            <label for="sh">Show password</label>
+                        </span>
+                        <button type="submit" onclick="signUp()">Create your account</button>
+                        {{!-- {{#if error}}
+                        <p id="errr">{{error}}</p>
+                        {{/if}}
+                        {{#if error}}
+                        <p id="errr">{{error}}</p>
+                        {{/if}} --}}
+                    </form>
+
+                </div>
+                <div class="M-forms Two">
+
+                    <!-- Head -->
+                    <h1>LOGIN</h1>
+
+
+                    <!-- Login -->
+                    <form action="/userLogin" method="POST">
+                        <label for="">Email or Phone Number</label>
+                        <input name="dataMain" type="text">
+                        <label for="">Enter your password</label>
+                        <input name="password" type="password" class="logPass">
+                        <input name="type" type="t" id="west">
+                        <span>
+                            <input type="checkbox" onclick="showPass('logPass')" name="sh">
+                            <label for="sh">Show password</label>
+                        </span>
+                        <button type="submit">Login</button>
+
+                    </form>
+
+                </div>
+                <div class="M-forms Three">
+                    <!-- Head -->
+                    <h1>Admin log</h1>
+
+                    <!-- Login -->
+                    <form method="POST" action="/adminLogin">
+                        <label for="">Email</label>
+                        <input name="email" type="text">
+                        <label for="">Enter admin code</label>
+                        <input name="password" type="password" class="adminPass">
+                        <span>
+                            <input type="checkbox" onclick="showPass('adminPass')" name="sh">
+                            <label for="sh">Show password</label>
+                        </span>
+                        <button type="submit">Confirm</button>
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast">
+        error should shown here
+    </div>
+    <div class="dataHider">
+        <p>{{client}}</p>
+        {{#if error}}
+        <h1>{{error}}</h1>
+        {{/if}}
+        {{#if adm}}
+        <h2>{{adm}}</h2>
+        {{/if}}
+
+    </div>
+
+    <script>
+        let errorData = null
+        let admU = null
+        let client = document.querySelector('.dataHider p').innerHTML
+        if(document.querySelector('.dataHider h1')) errorData = document.querySelector('.dataHider h1').innerHTML
+        if(document.querySelector('.dataHider h2')) admU = document.querySelector('.dataHider h2').innerHTML
+    </script>
+    <script src="js/signLog.js"></script>
+</body>
+
+</html>

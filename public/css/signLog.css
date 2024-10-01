@@ -1,0 +1,284 @@
+/* bismillahiRahmaniRaheem */
+
+*{
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+:root{
+    --Signup-solid: #00b14a;
+    --Login-solid: #cc9602;
+    --Admin-solid: #008fc7d8;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow: hidden;
+    background: url('../Images/user_sign\ _bg.jpg');
+    background-position: center bottom;
+    transition:  all .5s;
+}
+.bg{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-grow: 1;
+    background-size: cover;
+}
+
+
+/* Screen Containers */
+
+.container{
+    height: 100%;
+    margin-left: 5px;
+}
+.container.One{
+    flex-grow: 1;
+    min-width: 0px;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+.container.Two{
+    height: 100vh;
+    width: 50%;
+    max-width: 800px;
+    color: white;
+    transform: rotate(6deg) translateX(0);
+    transition: all .5s;
+    overflow: visible;
+}
+
+
+
+
+/* First/Button section */
+.select-btn{
+    height: 60px;
+    display: flex;
+    color: rgb(245, 245, 245);
+    width: 80%;
+}
+/* Three buttons */
+.select-btn .selecter{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #443939;
+    backdrop-filter: blur(30px);
+    background-color: #00ff6a5d;
+    z-index: 0;
+    transition: all .5s;
+    box-sizing: content-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.selecter.first{
+    border-radius: 30px 0px 0px 30px;
+}
+.selecter.midle{
+    background-color: #ffc4007a;
+    border-radius: 0 30px 30px 0;
+}
+.selecter.last{
+    border-radius: 0px 30px 30px 0px;
+    background-color: #006eff4f;
+}
+.selecter:hover{
+    box-shadow:  10px 10px 10px black;
+    z-index: 1;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:768px){
+    .container.One{
+        align-items: start;
+        font-size: 13px;
+    }
+    .container.Two{
+        width: 100%;
+        max-width: 800px;
+    }
+    .select-btn{
+        position: fixed;
+        flex-direction: row;
+        z-index: 1;
+        left: 0;
+        width: calc(100%);
+    }
+    .selecter{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .selecter.first{
+        border-radius: 0px;
+    }
+    .selecter.last{
+        border-radius: 0px;
+    }
+    .selecter.midle{
+        border-radius: 0px;
+    }
+}
+
+
+
+/* Form Section */
+
+/* Main session */
+.M-forms{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(black ,rgba(0, 0, 0, 0.479));
+    margin-bottom: 3px;
+    border: 1px solid #443939;
+    border-radius: 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+.M-forms.Two form,.M-forms.Two h1{
+    transform: rotate(0deg);
+}
+.M-forms.Three h1,.M-forms.Three form{
+    transform: rotate(5deg);
+}
+.M-forms.One{
+    padding-top: 100px;
+}
+input[type=t]{
+   display: none;
+}
+/* Head */
+.container h1{
+    font-size: 40px;
+    text-align: center;
+    box-sizing: content-box;
+    padding: 80px 0px 80px 0px;
+    margin: 0;
+    transform: rotate(-6deg);
+}
+
+
+/* Form field */
+.container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    transform: rotate(-6deg);
+}
+.container input[type=checkbox]{
+    height: 15px;
+    color: white;
+    width: 30px;
+    outline: 0;
+}
+.container form input{
+    width: 70%;
+    height: 45px;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: 1px solid rgb(121, 121, 121);
+    border: 0;
+    font-size: 20px;
+    padding-left: 25px;
+    background: rgb(204, 204, 204);
+    font-weight: bold;
+}
+.container form label{
+    width: 70%;
+    max-width: 400px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(212, 212, 212);
+    text-shadow: 0;
+}
+.container button{
+    width: 70%;
+    padding: 15px 0 15px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 10px;
+    max-width: 400px;
+    border: 0;
+    background: var(--Signup-solid);
+    color: white;
+}
+.M-forms.Two button{
+    background: var(--Login-solid);
+}
+.M-forms.Three button{
+    background: var(--Admin-solid);
+}
+.container span{
+    display: flex;
+    width: 70%;
+    margin: 0 auto 0 auto;
+    max-width: 400px;
+}
+
+
+/* Annimations */
+.container.Two.signups{
+    transform: translateY(0) rotate(6deg) translateX(0);
+}
+.container.Two.logins{
+    transform: translateY(-100vh) rotate(0) translateX(0);
+}
+.container.Two.admins{
+    transform: translateY(-200vh) rotate(-5deg) translateX(-200px);
+}
+
+
+
+/* Tost */
+#errr , .dataHider{
+    display: none;
+}
+.toast{
+    width: 400px;
+    height: auto;
+    backdrop-filter: blur(60px);
+    background-color: #0000002d;
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    border: 1px solid rgb(165, 31, 31);
+    color: rgb(255, 71, 71);
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    box-shadow: rgba(255, 0, 0, 0.11) 0px 0px 20px ;
+    opacity: 0;
+    transition: all .8s;
+    max-width: 80%;
+    text-align: center;
+}

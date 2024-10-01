@@ -1,0 +1,494 @@
+/* Bismillah */
+
+/* bismillahiRahmaniRaheem */
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #36a5ff;
+}
+
+:root {
+    --Signup-solid: #00b14a;
+    --Login-solid: #cc9602;
+    --Admin-solid: #008fc7d8;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+    background-image: url(../Images/devloper_SHUBHAM.jpg);
+    background-position: center le;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+header {
+    width: 100vw;
+    height: 80px;
+    background: #00000052;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    backdrop-filter: blur(100px);
+}
+
+.log-outer {
+    flex: 0;
+    background: rgb(24, 21, 21);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-style: 20px;
+    font-weight: bold;
+    border-radius: 55px;
+    border: 1px solid #443939;
+}
+
+header img {
+    width: 45px;
+    height: 45px;
+}
+
+
+
+/* Section */
+section {
+    flex-grow: 1;
+    width: 100%;
+    overflow-y: scroll
+}
+
+.bodyMain {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    padding: 30px;
+}
+
+/* Card items */
+.cardItems {
+    margin: 2px;
+    transition: all .5s;
+    backdrop-filter: blur(29px);
+    background-color: #00000050;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid #443939;
+}
+
+.cardItems.one {
+    grid-area: 1 / 1 / span 2 / 1;
+    z-index: 0;
+    padding: 30px;
+}
+
+.cardItems.three {
+    padding: 30px;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.cardItems.two {
+    padding: 30px;
+}
+
+.cardItems h1 {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.cardItems h2 {
+    text-align: center;
+    margin: 0;
+    opacity: .6;
+}
+
+.cardItems p {
+    text-align: center;
+    opacity: .5;
+}
+
+/* Card-Contents */
+.user-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.com-soon {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    justify-content: center;
+}
+
+.dev {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dev h1 span {
+    font-size: 25px;
+}
+
+/* Dev-Details----------- */
+.dev-details {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    transition: all .5s;
+    padding: 30px;
+    padding-top: 110px;
+    backdrop-filter: blur(20px)
+}
+
+.dev-details.show {
+    transform: translateY(-100vh);
+    opacity: 1;
+}
+
+.search-user {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    background-color: #00000050;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-user img {
+    height: auto;
+    width: 150px;
+    border-radius: 20px;
+}
+
+#mypic {
+    border: 2px solid #504c4c;
+}
+
+.search-user p {
+    opacity: .5;
+}
+
+.search-user h2 {
+    color: #36a5ff;
+    margin-top: 0;
+}
+
+.search-user #closer {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    filter: brightness(0) invert(.7);
+}
+
+
+
+/* User-List  Layout */
+
+.user-search-container {
+    margin-top: 10px;
+    width: calc(100% - 80px);
+    height: 50px;
+    background: rgba(139, 136, 136, 0.144);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.user-search-container input {
+    margin-top: 2px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-weight: bold;
+    padding-left: 30px;
+    color: white;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: white;
+    opacity: .5;
+}
+
+.user-search-container #add {
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+    transform: rotate(45deg);
+    filter: brightness(0) invert(.5);
+    transition: all .5s;
+}
+
+
+/* List of User */
+.user-list {
+    flex: 1;
+    padding-top: 10px;
+    margin-bottom: 50px;
+    overflow-y: scroll;
+}
+
+.user-list .demo {
+    margin-top: 10px;
+    height: 100%;
+    height: auto;
+    transition: all .5s;
+}
+
+.user-list .demo .inner {
+    padding: 0 30px 0 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 5px;
+    height: 70px;
+    flex: 1;
+    border-radius: 15px;
+    overflow-y: auto;
+    font-weight: 400;
+    background: #00000040;
+}
+
+.user-list .demo p {
+    opacity: 1;
+    font-size: 20px;
+}
+
+.user-list .demo span {
+    flex: 1;
+    width: 100px;
+}
+
+.user-list .demo button {
+    padding: 10px;
+    margin-left: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    background: #a088881f;
+    border: 0;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.user-list .demo button:hover {
+    transform: scale(1.1);
+}
+
+.user-list .demo #delete-btn {
+    color: rgb(253, 88, 88);
+}
+
+.user-view {
+    width: 100%;
+    height: auto;
+    background: #00000040;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 30px;
+    transition: all .5s;
+}
+#up-head{
+    font-weight: bold;
+    opacity: .55;
+}
+
+.user-view .input-option input {
+    background: #ffffff14;
+    width: 90%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    color: white;
+}
+
+
+/* input field grid */
+.user-view .input-option{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.loader {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00000030;
+    padding: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #dbdbdb;
+    transition: all .5s;
+    color: #00b14a;
+    font-weight: bold;
+}
+.loader:hover{
+    transform: translateX(-50%) scale(1.1);
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* MediaQuery */
+
+@media screen and (max-width: 888px) {
+
+    .bodyMain {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .cardItems.one {
+        grid-area: 1 / 1 / 3 / 2;
+        z-index: 0;
+    }
+
+    .dev-details {
+        opacity: 0;
+        place-items: center;
+    }
+
+    .search-user {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+}
+
+@media screen and (min-width: 888px) {
+
+    .cardItems.two.hide,
+    .cardItems.three.hide {
+        transform: translateX(calc(-100% + -34px));
+        opacity: 0;
+    }
+
+    .bodyMain {
+        display: grid;
+        grid-template-columns: auto 50%;
+        grid-template-rows: auto auto;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .search-user {
+        padding-left: 170px;
+        padding-right: 170px;
+    }
+}
+
+
+
+/* Tost */
+#errr{
+    display: none;
+}
+.toast{
+    width: 400px;
+    height: auto;
+    backdrop-filter: blur(60px);
+    background-color: #0000002d;
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    border: 1px solid rgb(165, 31, 31);
+    color: rgb(255, 71, 71);
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    box-shadow: rgba(255, 0, 0, 0.11) 0px 0px 20px ;
+    opacity: 0;
+    transition: all .8s;
+    max-width: 80%;
+    text-align: center;
+}
+.toast.info{
+    border: 1px solid rgb(58, 165, 31);
+    color: rgb(71, 255, 132);
+
+}
